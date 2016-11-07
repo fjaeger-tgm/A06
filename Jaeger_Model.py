@@ -8,97 +8,101 @@ class Model:
 
     def __init__(self):
         self.random = random.random()
-        self.m = 15
-        self.lButton = -1
+        self.M = 15
+        self.__lButton = 0
         self.__gesamt = 0
         self.__offen = 15
         self.__richtig = 0
         self.__falsch = 0
         self.__spiele = 1
 
-        def setMoeglichkeit(x):
-            self.m = x
+    def setMoeglichkeit(self,x):
+        """
+        :param x:
+        :return: void
+        """
+        self.M = x
 
-        def setlButton(x):
-            """
+    def setlButton(self,x):
+        """
 
-            :param x:
-            :return:
-            """
-            self.lButton = x
+        :param x:
+        :return: void
+        """
+        self.__lButton = x
 
-        def setGesamt(x):
-            """
+    def setGesamt(self,x):
+        """
 
-            :param x:
-            :return:
-            """
-            self.__gesamt = x
+        :param x:
+        :return: void
+        """
+        self.__gesamt = x
 
-        def setOffen(x):
-            """
+    def setOffen(self,x):
+        """
 
-            :param x:
-            :return:
-            """
-            self.__offen = x
+        :param x:
+        :return: void
+        """
+        self.__offen = x
 
-        def setRichtig(x):
-            """
+    def setRichtig(self,x):
+        """
 
-            :param x:
-            :return:
-            """
-            self.__richtig = x
+        :param x:
+        :return: void
+        """
+        self.__richtig = x
 
-        def setFalsch(x):
-            """
+    def setFalsch(self,x):
+        """
 
-            :param x:
-            :return:
-            """
-            self.__falsch = x
+        :param x:
+        :return: void
+        """
+        self.__falsch = x
 
-        def setSpiele(x):
-            """
+    def setSpiele(self,x):
+        """
 
-            :param x:
-            :return:
-            """
-            self.__spiele = x
+        :param x:
+        :return: void
+        """
+        self.__spiele = x
 
-        def getlButton():
-            """
-            :return:
-            """
-            return self.lButton
+    def getlButton(self):
+        """
+        :return:den letzen gedrückten Button
+        """
+        return self.__lButton
 
-        def getGesamt():
-            """
-            :return:
-            """
-            return self.__lButton
+    def getGesamt(self):
+        """
+        :return: die gesamte Anzahl an gedrückten Buttons
+        """
+        return self.__lButton
 
-        def getOffen():
-            """
-            :return:
-            """
-            return self.__offen
+    def getOffen(self):
+        """
+        :return: Buttons die nicht gedrückt wurden
+        """
+        return self.__offen
 
-        def getFalsch():
-            """
-            :return:
-            """
-            return self.__falsch
+    def getFalsch(self):
+        """
+        :return: Buttons die falsch gedrückt wurden
+        """
+        return self.__falsch
 
-        def getRichtig():
-            """
-            :return:
-            """
-            return self.__richtig
+    def getRichtig(self):
+        """
+        :return:
+        """
+        return self.__richtig
 
-        def getSpiele():
-            """
-            :return:
-            """
-            return self.__spiele
+    def getSpiele(self):
+        """
+        :return: Buttons die richtig gedrückt wurden
+        """
+        return self.__spiele
